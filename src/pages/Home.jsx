@@ -58,12 +58,14 @@ function Home(){
         </form>
 
         {error && <div className="error-message">{"Error😔"}</div>}
-        {loading ? <div className="loading">Loading.....</div> : <div className="movies-grid">
-            {movies.map((movie) => (
-                // movie.title.toLowerCase().startsWith(searchQuery) && 
-                <MovieCard movie={movie} key={movie.id}/>
-            ))}
-        </div>}
+        {loading ? <div className="loading">Loading.....</div> : 
+            <div className="movies-grid">
+                {movies.map((movie) => (
+                    // movie.title.toLowerCase().startsWith(searchQuery) && 
+                    <MovieCard movie={movie} key={movie.id}/>
+                ))}
+            </div>
+        }
         
     </div>
     );
